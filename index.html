@@ -1,28 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>FastAPI + Cloudflare Pages</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FastAPI + Typewriter</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1 id="greeting">Loading...</h1>
-
-  <script>
-    // Sleep function
-    function sleep(ms) {
-      return new Promise(resolve => setTimeout(resolve, ms));
-    }
-
-    // Async function to fetch and update greeting
-    async function fetchGreeting() {
-      const res = await fetch("https://pleasing-expression-production.up.railway.app/");
-      const data = await res.json();
-      console.log(data.message);
-      await sleep(2000); // wait for 2 seconds
-      document.getElementById("greeting").textContent = data.message;
-    }
-
-    // Call it
-    fetchGreeting();
-  </script>
+  <h1 id="greeting" class="typewriter"></h1>
+  <script src="script.js"></script>
 </body>
 </html>
