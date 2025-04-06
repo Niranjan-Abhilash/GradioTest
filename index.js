@@ -1,5 +1,13 @@
-fetch("https://pleasing-expression-production.up.railway.app/api/hello?name=Cloudflare")
+// fetch("https://pleasing-expression-production.up.railway.app/")
+//   .then(res => res.json())
+//   .then(data => {
+//     document.body.innerHTML = `<h1>${data.greeting}</h1>`;
+//   });
+
+fetch("https://pleasing-expression-production.up.railway.app/")
   .then(res => res.json())
   .then(data => {
-    document.body.innerHTML = `<h1>${data.greeting}</h1>`;
+    console.log(data.message);
+    await sleep(2000);
+    document.getElementById("greeting").textContent = data.message;
   });
