@@ -11,6 +11,7 @@ async function typeWriter(text, element, delay = 50) {
 
 async function main() {
   const greetingElement = document.getElementById("greeting");
+  const g2E = document.getElementById("g2E");
   const cursor = document.getElementById("cursor");
 
   //const response = await fetch("https://pleasing-expression-production.up.railway.app/");
