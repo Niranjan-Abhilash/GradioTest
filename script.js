@@ -17,7 +17,7 @@ async function main() {
   const response = await fetch("https://shy-marsha-potter-2060b27e.koyeb.app/");
   const data = await response.json();
 
-  await typeWriter(data.message, greetingElement);
+  await typeWriter(data.msg, greetingElement);
 
   // Blink cursor twice, then hide
   await sleep(1400); // roughly 2 blinks
