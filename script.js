@@ -18,6 +18,7 @@ async function main() {
   const data = await response.json();
 
   await typeWriter(data.msg, greetingElement);
+  await typeWriter(data.msg2, g2E);
 
   // Blink cursor twice, then hide
   await sleep(1400); // roughly 2 blinks
