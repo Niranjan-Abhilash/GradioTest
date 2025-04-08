@@ -13,7 +13,8 @@ async function main() {
   const greetingElement = document.getElementById("greeting");
   const cursor = document.getElementById("cursor");
 
-  const response = await fetch("https://pleasing-expression-production.up.railway.app/");
+  //const response = await fetch("https://pleasing-expression-production.up.railway.app/");
+  const responce = await fetch("shy-marsha-potter-2060b27e.koyeb.app/");
   const data = await response.json();
 
   await typeWriter(data.message, greetingElement);
