@@ -4,10 +4,17 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  font-size: 2rem; /* You can adjust the size */
-  font-weight: bold;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean modern font */
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: 'Poppins', Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  border-radius: 1rem;
+  padding: 2rem 3rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 90%;
+  margin: auto;
 }
+
 
 /* Style the greeting text itself if needed */
 #greeting {
