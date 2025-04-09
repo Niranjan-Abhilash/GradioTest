@@ -1,49 +1,21 @@
-#cursor {
-  display: inline;
-  animation: blink 0.8s infinite;
-}
-
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
-
-#loader {
+/* Center the greeting on the page */
+#greeting-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  font-size: 2rem; /* You can adjust the size */
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean modern font */
 }
 
-.container {
-  --uib-size: 40px;
-  --uib-color: black;
-  --uib-speed: 1.4s;
-  --uib-bg-opacity: .1;
-  height: var(--uib-size);
-  width: var(--uib-size);
-  transform-origin: center;
-  overflow: visible;
+/* Style the greeting text itself if needed */
+#greeting {
+  white-space: pre; /* Preserve spacing */
 }
 
-.car {
-  fill: none;
-  stroke: var(--uib-color);
-  stroke-dasharray: 15, 85;
-  stroke-dashoffset: 0;
-  stroke-linecap: round;
-  animation: travel var(--uib-speed) linear infinite;
-  will-change: stroke-dasharray, stroke-dashoffset;
-  transition: stroke 0.5s ease;
-}
-
-.track {
-  stroke: var(--uib-color);
-  opacity: var(--uib-bg-opacity);
-  transition: stroke 0.5s ease;
-}
-
-@keyframes travel {
-  0% { stroke-dashoffset: 0; }
-  100% { stroke-dashoffset: -100; }
+/* Already included cursor blinking */
+#cursor {
+  display: inline;
+  animation: blink 0.8s infinite;
 }
