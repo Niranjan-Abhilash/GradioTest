@@ -12,16 +12,25 @@ async function typeWriter(text, element, delay = 50) {
 async function main() {
   const greetingElement = document.getElementById("greeting");
   const cursor = document.getElementById("cursor");
+  const loader = document.getElementById("loader");
 
-  //const response = await fetch("https://pleasing-expression-production.up.railway.app/");
-  const response = await fetch("https://shy-marsha-potter-2060b27e.koyeb.app/");
-  const data = await response.json();
-  
-  await typeWriter(data.msg, greetingElement);
+  try {
+    const response = await fetch("https://shy-marsha-potter-2060b27e.koyeb.app/");
+    const data = await response.json();
 
-  // Blink cursor twice, then hide
-  await sleep(1400); // roughly 2 blinks
-  cursor.style.display = "none";
+    // Hide loader once data is ready
+    loader.style.display = "none";
+
+    // Display message with typing animation
+    await typeWriter(data.msg, greetingElement);
+
+    // Blink cursor twice, then hide
+    await sleep(1400);
+    cursor.style.display = "none";
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    loader.textContent = "Failed to load message 😢";
+  }
 }
 
 main();
