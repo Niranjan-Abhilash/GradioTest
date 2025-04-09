@@ -15,13 +15,10 @@ async function main() {
   const cursor = document.getElementById("cursor");
   const loader = document.getElementById("loader");
 
-  cursor.style.display = "none"; // Hide the cursor initially
-
   try {
     const response = await fetch("https://shy-marsha-potter-2060b27e.koyeb.app/");
     const data = await response.json();
-
-    loader.style.display = "none"; // Hide loader once ready
+    
     await typeWriter(data.msg, greetingElement, cursor); // Type message
 
     await sleep(1400); // Let cursor blink briefly
