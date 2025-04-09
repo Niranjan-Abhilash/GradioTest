@@ -21,10 +21,10 @@ async function main() {
 
     // Hide loader once data is ready
     loader.style.display = "none";
-    document.getElementById("cursor").style.display = "block";
 
     // Display message with typing animation
     await typeWriter(data.msg, greetingElement);
+    document.getElementById("cursor").style.display = "block";
 
     // Blink cursor twice, then hide
     await sleep(1400);
