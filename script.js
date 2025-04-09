@@ -10,6 +10,7 @@ async function typeWriter(text, element, delay = 50) {
 }
 
 async function main() {
+  document.getElementById("cursor").style.display = "none";
   const greetingElement = document.getElementById("greeting");
   const cursor = document.getElementById("cursor");
   const loader = document.getElementById("loader");
@@ -20,6 +21,7 @@ async function main() {
 
     // Hide loader once data is ready
     loader.style.display = "none";
+    document.getElementById("cursor").style.display = "true";
 
     // Display message with typing animation
     await typeWriter(data.msg, greetingElement);
