@@ -21,7 +21,7 @@ async function main() {
 
     // Hide loader once data is ready
     loader.style.display = "none";
-    document.getElementById("cursor").style.display = "true";
+    document.getElementById("cursor").style.display = "block";
 
     // Display message with typing animation
     await typeWriter(data.msg, greetingElement);
